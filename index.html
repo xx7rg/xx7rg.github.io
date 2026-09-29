@@ -1,51 +1,60 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>x7rG Enterprise — AquaQuest</title>
-<style>
-  :root { color-scheme: light dark; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.65; max-width: 640px; margin: 0 auto; padding: 48px 20px 80px;
-    color: #171A3A; background: #F6F7FF;
-  }
-  @media (prefers-color-scheme: dark) {
-    body { color: #E8E9F5; background: #12132A; }
-    a { color: #9F93FF; }
-    .card { background: #1E1F3D; border-color: #33356A; }
-  }
-  h1 { font-size: 1.5rem; margin-bottom: 4px; }
-  .meta { opacity: .7; font-size: .9rem; margin-bottom: 28px; }
-  a { color: #6D5DFB; }
-  .card {
-    display: block; background: #fff; border: 1px solid #D5D7F5; border-radius: 12px;
-    padding: 16px 18px; margin: 12px 0; text-decoration: none; color: inherit;
-  }
-  .card b { display: block; font-size: 1.02rem; }
-  .card span { opacity: .7; font-size: .9rem; }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Central pública de documentos legais, privacidade e publicidade do aplicativo AquaQuest." />
+  <meta name="theme-color" content="#171a3a" />
+  <meta property="og:title" content="AquaQuest — Documentos e transparência" />
+  <meta property="og:description" content="Consulte a Política de Privacidade, os Termos de Uso e as informações de publicidade do AquaQuest." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://xx7rg.github.io/" />
+  <link rel="canonical" href="https://xx7rg.github.io/" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>AquaQuest — Documentos e transparência</title>
 </head>
 <body>
-  <h1>AquaQuest</h1>
-  <p class="meta">Documentos legais — x7rG Enterprise</p>
+  <div class="container">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Página inicial do AquaQuest">
+        <img src="./favicon.svg" alt="" width="34" height="34" />
+        <span>AquaQuest</span>
+      </a>
+      <a class="back-link" href="mailto:contato.rgsantos@gmail.com">Falar com o desenvolvedor</a>
+    </header>
 
-  <a class="card" href="./privacy-policy.html">
-    <b>Política de Privacidade</b>
-    <span>Como o AquaQuest trata seus dados</span>
-  </a>
-  <a class="card" href="./terms-of-use.html">
-    <b>Termos de Uso</b>
-    <span>Condições de uso do aplicativo</span>
-  </a>
-  <a class="card" href="./app-ads.txt">
-    <b>app-ads.txt</b>
-    <span>Autorização de inventário publicitário</span>
-  </a>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">x7rG Enterprise · Transparência</p>
+        <h1>Documentos claros para uma hidratação tranquila.</h1>
+        <p class="hero-copy">Consulte como o AquaQuest trata dados, quais são as condições de uso do aplicativo e quem está autorizado a vender seu inventário publicitário.</p>
+        <span class="status">Documentos públicos e disponíveis sem cadastro</span>
+      </section>
 
-  <p class="meta" style="margin-top:32px">
-    Contato: <a href="mailto:contato.rgsantos@gmail.com">contato.rgsantos@gmail.com</a>
-  </p>
+      <nav class="card-grid" aria-label="Documentos do AquaQuest">
+        <a class="card" href="./privacy-policy.html">
+          <span class="card-icon" aria-hidden="true">P</span>
+          <span><b>Política de Privacidade</b><span>Como o aplicativo armazena dados locais e utiliza serviços de publicidade.</span></span>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="card" href="./terms-of-use.html">
+          <span class="card-icon" aria-hidden="true">T</span>
+          <span><b>Termos de Uso</b><span>Condições, responsabilidades e limites de uso do AquaQuest.</span></span>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="card" href="./app-ads.txt">
+          <span class="card-icon" aria-hidden="true">AD</span>
+          <span><b>Arquivo app-ads.txt</b><span>Declaração pública do vendedor autorizado para publicidade.</span></span>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p><strong>© 2026 x7rG Enterprise™</strong> — Todos os direitos reservados.</p>
+      <p>Contato: <a href="mailto:contato.rgsantos@gmail.com">contato.rgsantos@gmail.com</a></p>
+    </footer>
+  </div>
 </body>
 </html>

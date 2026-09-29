@@ -2,16 +2,19 @@
 
 <img src="docs/images/x7rg.png" alt="x7rG ENTERPRISE" width="260" />
 
-# x7rG Enterprise — Documentos do AquaQuest
+# AquaQuest — Documentos e Transparência
 
-**Um endereço para consultar a política de privacidade, os termos de uso e as informações de publicidade do AquaQuest.**
+<img src="docs/images/project.svg" alt="Central pública de documentos do AquaQuest" width="680" />
+
+**Privacidade, condições de uso e informações de publicidade reunidas em um endereço público e acessível.**
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-663399?logo=css&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?logo=github&logoColor=white)
 ![Idioma](https://img.shields.io/badge/idioma-pt--BR-2E8B57)
+![Status](https://img.shields.io/badge/status-publicado-38A169)
 
-**[Acessar o site](https://xx7rg.github.io/)**
+**[Acessar a central de documentos](https://xx7rg.github.io/)**
 
 Publicado por **x7rG ENTERPRISE™**
 
@@ -21,51 +24,65 @@ Publicado por **x7rG ENTERPRISE™**
 
 ## Sobre o projeto
 
-Este repositório mantém o site público de documentos do **AquaQuest**, aplicativo de hábitos de hidratação da x7rG Enterprise. A página inicial reúne os links para os documentos e o contato do desenvolvedor.
+Este repositório publica os documentos do **AquaQuest**, aplicativo que ajuda a criar uma rotina de hidratação por meio de metas, lembretes e evolução de um mascote virtual.
 
-A estrutura é simples: páginas HTML com CSS incorporado, sem instalação de dependências, banco de dados ou etapa de compilação. O site é publicado pelo GitHub Pages a partir da raiz da branch `main`.
+A central oferece um endereço estável para usuários, lojas de aplicativos e serviços de publicidade consultarem como os dados são tratados, quais condições regem o uso do aplicativo e qual conta está autorizada a comercializar seu inventário de anúncios.
 
-## Páginas publicadas
+O site usa somente HTML e CSS. Não há JavaScript, cookies, analytics, banco de dados ou etapa de compilação.
 
-| Página | Conteúdo | Acesso |
+## Conteúdo publicado
+
+| Documento | Finalidade | Endereço |
 | --- | --- | --- |
-| Início | Central de documentos e contato. | [Abrir página inicial](https://xx7rg.github.io/) |
-| Política de Privacidade | Documento sobre o tratamento de dados do aplicativo. | [Consultar política](https://xx7rg.github.io/privacy-policy.html) |
-| Termos de Uso | Documento com as condições de uso do AquaQuest. | [Consultar termos](https://xx7rg.github.io/terms-of-use.html) |
-| `app-ads.txt` | Declaração de vendedor autorizado para o inventário publicitário do aplicativo. | [Ver arquivo](https://xx7rg.github.io/app-ads.txt) |
+| Central | Apresenta e organiza todos os documentos. | [Abrir início](https://xx7rg.github.io/) |
+| Política de Privacidade | Explica dados locais, permissões, publicidade, retenção e contato. | [Consultar política](https://xx7rg.github.io/privacy-policy.html) |
+| Termos de Uso | Define licença, responsabilidades, aviso de saúde e condições de uso. | [Consultar termos](https://xx7rg.github.io/terms-of-use.html) |
+| `app-ads.txt` | Declara o vendedor autorizado do inventário publicitário. | [Ver declaração](https://xx7rg.github.io/app-ads.txt) |
 
-## Apresentação e navegação
+## Fluxo de consulta
 
-- Página inicial com cartões para cada documento.
-- Layout que se adapta a telas de celular e computador.
-- Estilos para a preferência de tema claro ou escuro do dispositivo.
-- Textos em português e contato por e-mail.
-- URLs diretas para consultar e compartilhar cada documento.
+```mermaid
+flowchart LR
+    A[Usuário ou loja] --> B[Central pública]
+    B --> C[Política de Privacidade]
+    B --> D[Termos de Uso]
+    B --> E[app-ads.txt]
+    C --> F[Contato do desenvolvedor]
+    D --> F
+```
+
+## Recursos do site
+
+- Layout responsivo para celular e computador.
+- Tema automático claro ou escuro conforme o dispositivo.
+- Navegação consistente entre a central e os documentos.
+- Metadados de descrição, URL canônica e compartilhamento.
+- Página `404` para recuperar acessos a endereços inexistentes.
+- Acessibilidade com HTML semântico e suporte a movimento reduzido.
+- Publicação automática pelo GitHub Pages com HTTPS.
 
 ## Estrutura
 
 ```text
 xx7rg.github.io/
-├── index.html           # Central de documentos
-├── privacy-policy.html  # Política de Privacidade do AquaQuest
-├── terms-of-use.html    # Termos de Uso do AquaQuest
-├── app-ads.txt          # Declaração de inventário publicitário
-├── docs/images/         # Identidade visual do README
-└── README.md            # Apresentação e manutenção do repositório
+├── index.html             # Central de documentos
+├── privacy-policy.html    # Política de Privacidade
+├── terms-of-use.html      # Termos de Uso
+├── app-ads.txt            # Vendedor autorizado do AdMob
+├── 404.html               # Página para endereços inexistentes
+├── styles.css             # Identidade visual compartilhada
+├── favicon.svg            # Ícone do site
+├── docs/images/           # Imagens do README
+└── README.md              # Documentação do repositório
 ```
 
 ## Visualizar localmente
 
-Clone o repositório e abra `index.html` no navegador:
+Requer apenas Git e um navegador. Para usar um servidor local, também é necessário Python 3.
 
 ```bash
 git clone https://github.com/xx7rg/xx7rg.github.io.git
 cd xx7rg.github.io
-```
-
-Também é possível servir os arquivos com Python 3:
-
-```bash
 python -m http.server 8000
 ```
 
@@ -73,17 +90,17 @@ Depois, acesse [localhost:8000](http://localhost:8000).
 
 ## Manutenção e publicação
 
-1. Edite o arquivo correspondente à página que precisa de atualização.
-2. Confira o texto, os links e a apresentação no navegador.
-3. Ao revisar um documento, mantenha sua data de atualização coerente com a alteração.
+1. Edite o documento correspondente.
+2. Atualize a data no topo quando o conteúdo jurídico mudar.
+3. Confira a navegação, os links externos e a apresentação localmente.
 4. Envie o commit para a branch `main`.
-5. Acompanhe a publicação em **Settings → Pages** e confira a página publicada.
+5. Verifique a publicação em [xx7rg.github.io](https://xx7rg.github.io/).
 
-O GitHub Pages está configurado para usar a branch `main`, pasta raiz (`/`). Preserve os nomes dos arquivos para manter os endereços já compartilhados. O `app-ads.txt` deve permanecer na raiz do site, em formato de texto simples.
+O GitHub Pages publica a raiz da branch `main`. Preserve os nomes e endereços dos documentos já distribuídos. O arquivo `app-ads.txt` deve permanecer na raiz e seguir o formato exigido pelo serviço de publicidade.
 
 ## Contato
 
-Desenvolvido e mantido por **x7rG Enterprise — Rogério Gomes dos Santos**.
+Mantido por **x7rG Enterprise — Rogério Gomes dos Santos**.
 
 📧 [contato.rgsantos@gmail.com](mailto:contato.rgsantos@gmail.com)
 
