@@ -13,6 +13,7 @@
 ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?logo=github&logoColor=white)
 ![Idioma](https://img.shields.io/badge/idioma-pt--BR-2E8B57)
 ![Status](https://img.shields.io/badge/status-publicado-38A169)
+[![Validação](https://github.com/xx7rg/xx7rg.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/xx7rg/xx7rg.github.io/actions/workflows/ci.yml)
 
 **[Acessar a central de documentos](https://xx7rg.github.io/)**
 
@@ -73,6 +74,8 @@ xx7rg.github.io/
 ├── styles.css             # Identidade visual compartilhada
 ├── favicon.svg            # Ícone do site
 ├── docs/images/           # Imagens do README
+├── scripts/validate_static.py # Validação dos arquivos e links locais
+├── .github/workflows/ci.yml   # Verificação automática no GitHub
 └── README.md              # Documentação do repositório
 ```
 
@@ -88,11 +91,27 @@ python -m http.server 8000
 
 Depois, acesse [localhost:8000](http://localhost:8000).
 
+No macOS/Linux, use `python3` se `python` não estiver disponível.
+
+## Validar os arquivos
+
+Na pasta do projeto, execute:
+
+```bash
+python scripts/validate_static.py
+```
+
+No macOS/Linux, também pode usar `python3 scripts/validate_static.py`.
+O comando verifica as quatro páginas HTML e os destinos locais de links
+e imagens, incluindo as referências do README. A CI executa essa conferência
+em pushes para `main` e pull requests. Links externos e o conteúdo jurídico
+precisam de revisão separada.
+
 ## Manutenção e publicação
 
 1. Edite o documento correspondente.
 2. Atualize a data no topo quando o conteúdo jurídico mudar.
-3. Confira a navegação, os links externos e a apresentação localmente.
+3. Execute a validação e confira a navegação, os links externos e a apresentação localmente.
 4. Envie o commit para a branch `main`.
 5. Verifique a publicação em [xx7rg.github.io](https://xx7rg.github.io/).
 
